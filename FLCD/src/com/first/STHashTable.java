@@ -3,7 +3,7 @@ package com.first;
 public class STHashTable {
     private SLNode[] table;
 
-    private SLNode[] getTable() {
+    public SLNode[] getTable() {
         return table;
     }
 
@@ -18,21 +18,21 @@ public class STHashTable {
             if (table[pos] == null)
                 table[pos] = newElement;
             else {
-                newElement.next = table[pos];
+                newElement.setNext(table[pos]);
                 table[pos] = newElement;
             }
         }
     }
 
-    public boolean contains(String val) {
+    private boolean contains(String val) {
         int pos = myHash(val);
         if(this.table[pos]==null)
             return false;
         SLNode node = table[pos];
         while(node!=null){
-            if(node.symbol.equals(val))
+            if(node.getSymbol().equals(val))
                 return true;
-            node = node.next;
+            node = node.getNext();
         }
         return false;
     }
