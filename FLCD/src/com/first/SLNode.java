@@ -1,8 +1,8 @@
 package com.first;
 
 public class SLNode {
-    public String symbol;
-    public SLNode next;
+    private  String symbol;
+    private SLNode next;
 
     public SLNode(String something){
         this.symbol = something;
