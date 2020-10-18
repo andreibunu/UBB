@@ -3,7 +3,7 @@ package com.first;
 public class STHashTable {
     private SLNode[] table;
 
-    public SLNode[] getTable() {
+    private SLNode[] getTable() {
         return table;
     }
 
@@ -24,7 +24,7 @@ public class STHashTable {
         }
     }
 
-    private boolean contains(String val) {
+    public boolean contains(String val) {
         int pos = myHash(val);
         if(this.table[pos]==null)
             return false;
