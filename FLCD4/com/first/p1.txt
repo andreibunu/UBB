@@ -1,0 +1,16 @@
+number: a, b, c, greatest;
+read a,b,c;
+greatest := a;
+
+74greatest < b ? {
+        -> {greatest:=b},
+            -> {}
+           }
+
+greatest < c ? {
+        -> {greatest := c},
+            -> {}
+           }
+
+show greatest;
+done;
