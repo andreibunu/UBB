@@ -1,0 +1,15 @@
+array(number):numbers;
+read numbers;
+number: smallest, parser;
+parser := 1;
+while parser < lengthOf numbers {
+value numbers parser < smallest ? {
+-> {
+smallest := value numbers parser;
+},
+-> {}
+}
+parser := parser + 1;
+}
+show smallest;
+done;
